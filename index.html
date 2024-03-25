@@ -50,7 +50,9 @@
           </div>
           <div class="row mt-3 mx-0 border-bottom border-3">
             <div class="col-3 d-grid">
-              <button class="btn mb-3 btn-outline-warning">Add</button>
+              <button class="btn mb-3 btn-outline-warning"
+               data-bs-toggle="modal"
+               data-bs-target="#subjectAddEditModal">Add</button>
             </div>
 
             <div class="col-3 offset-6">
@@ -91,19 +93,33 @@
       </div>
     </div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade" id="subjectAddEditModal"
+     data-bs-backdrop="static" data-bs-keyboard="false" 
+     tabindex="-1" aria-labelledby="subjectAddEditModal" 
+     aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-outline-warning" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <div class="row mx-0 mt-3">
+              <div class="col-6">
+                <label for="txtSubjectName">Name:</label>
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" id="txtSubjectName">
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button"
+             class="btn btn-outline-warning"
+
+             id="btnSubjectSave"
+            >Save</button>
+            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
